@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=tel],select{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: rgb(91, 75, 241);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      // Countries
+      var state_arr = new Array("Select State","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Hariyana","Himachal Pradesh","Jammu & Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Orissa","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttarakhand","Uttar Pradesh","West Bengal");
+
+      $.each(state_arr, function (i, item) {
+          $('#state').append($('<option>', {
+              value: i,
+              text : item,
+          }, '</option>' ));
+      });
+
+      var c_a = new Array();
+      City<select>
+        <option value="city" disabled selected>Select your option</option>
+         c_a[0]="Select City";
+         c_a[1]="Select City|Vijaywada|Hindupur|Tenali";
+         c_a[2]="Select City|Tawang|Itanagar|Pasighat";
+         c_a[3]="Select City|Baksa|Barpeta|Golaghat";
+         c_a[4]="Select City|Patna|Gaya|Muzaffarpur";
+         c_a[5]="Select City|Raipur|Bilaspur|Korba";
+         c_a[6]="Select City|Ponda|Panaji|Bicholim";
+         c_a[7]="Select City|Ahemdabad|Surat|Vadodara";
+         c_a[8]="Select City|Sonipat|Sirsa|Ambala";
+         c_a[9]="Select City|Shimla|Dharamsala|Manali";
+         c_a[10]="Select City|Srinagar|Jammu|Anantnag";
+         c_a[11]="Select City|Dhanbad|Jamshedpur|Ranchi";
+         c_a[12]="Select City|Banglore|Mysore|Hanmpi";
+         c_a[13]="Select City|Kollam|Kannur|Kochi";
+         c_a[14]="Select City|Bhopal|Indore|Jabalpur";
+         c_a[15]="Select City|Navi mumbai|Pune|Mumbai";
+         c_a[16]="Select City|Thoubal|Chandel|Bishnupur";
+         c_a[17]="Select City|Shillong|Tura|Nongpoh";
+         c_a[18]="Select City|Aizawal|Lunglei|Champhai";
+         c_a[19]="Select City|Kohima|Dimapur";
+         c_a[20]="Select City|Bhubaneswar|Cuttack|Balasore";
+         c_a[21]="Select City|Patiala|Chandigarh|Jalandhar";
+         c_a[22]="Select City|Jaipur|Jodhpur|kota";
+         c_a[23]="Select City|Namchi|Gangtok|Lachung";
+        c_a[24]="Select City|Chennai|Madhurai|Coimbatore";
+         c_a[25]="Select City|Hyderabad|KArimnagar|Warangal";
+         c_a[26]="Select City|Agartala|Kailashahar";
+         c_a[27]="Select City|Dehradun|Haridwar";
+         c_a[28]="Select City|Lucknow|Kanpur";
+         c_a[29]="Select City|Kolkata|Asansol";
+ 
+ $('#state').change(function(){
+             var s = $(this).val();
+             if(s=='Select State'){
+                 $('#city').empty();
+                 $('#city').append($('<option>', {
+                     value: '0',
+                     text: 'Select City',
+                 }, '</option>'));
+             }
+             var city_arr = c_a[s].split("|");
+             $('#city').empty();
+ 
+             $.each(city_arr, function (j, item_city) {
+                 $('#city').append($('<option>', {
+                     value: item_city,
+                     text: item_city,
+                 }, '</option>'));
+             });
+ 
+ 
+         });
+     });
+ </script>
+
+</head>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="fname"><b>Firstname</b></label>
+    <input type="text" placeholder="Enter Firstname" name="fname" required>
+
+    <label for="lname"><b>Lastname</b></label>
+    <input type="text" placeholder="Enter Lastname" name="lname" required>
+
+    <label for="Mobile Number"><b>Mobile Number</b> </label>
+    <input type="tel" placeholder="Enter your mobile number" maxlength="10"
+      name="mobileNumber" required>
+
+    <label for="address"><b>Address Line1</b></label>
+    <input type="text" placeholder="Enter Address line1" name="address" required>
+
+    <label for="address"><b>Address Line2</b></label>
+    <input type="text" placeholder="Enter Address line2" name="address" required>
+
+    <!-- <label for="state"><b>State  </b></label>
+      <select name="state" id="state"></select> <br> -->
+
+      <b>State</b><select>
+        <option value="state" disabled selected>Select your option</option>
+        <option value="state">Andhra Pradesh</option>
+        <option value="state">Arunachal Pradesh</option>
+        <option value="state">Assam</option>
+        <option value="state">Bihar</option>
+        <option value="state">Chhattisgarh</option>
+        <option value="state">Goa</option>
+        <option value="state">Gujarat</option>
+        <option value="state">Hariyana</option>
+        <option value="state">Himachal Pradesh</option>
+        <option value="state">Jammu & Kashmir</option>
+        <option value="state">Jharkhand</option>
+        <option value="state">Karnataka</option>
+        <option value="state">Kerala</option>
+        <option value="state">Madhya Pradesh</option>
+        <option value="state">Maharashtra</option>
+        <option value="state">Manipur</option>
+        <option value="state">Meghalaya</option>
+        <option value="state">Mizoram</option>
+        <option value="state">Nagaland</option>
+        <option value="state">Orissa</option>
+        <option value="state">Punjab</option>
+        <option value="state">Rajasthan</option>
+        <option value="state">Sikkim</option>
+        <option value="state">Tamil Nadu</option>
+        <option value="state">Telangana</option>
+        <option value="state">Tripura</option>
+        <option value="state">Uttarakhand</option>
+        <option value="state">Uttar Pradesh</option>
+        <option value="state">West Bengal</option>
+      </select>
+      <br>
+      <br>
+      
+    <!---<label for="city"><b>City</b></label>
+      <select name="city" id="city"></select><br>-->
+     
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+</form>
+
+</body>
+</html>

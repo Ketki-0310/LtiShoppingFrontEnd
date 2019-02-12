@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="panel" >
+    <div class="panel-heading">{{title}}</div>
+    <div class="panel-body">
+<div  class="table-responsive" >
+   
+ 
+<table align="center">
+    
+    <thead>
+<tr>
+ <td>Retailer Name</td>
+ <td>Retailer Email</td>
+ <td>Delete Retailer</td>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let pro of retailer">
+        <td>{{pro.name}}</td>
+        <td>{{pro.email}}</td>
+        
+        <td><button type="submit">X</button></td>
+      </tr>
+  </tbody>
+
+</table>
+
+
+</div>
