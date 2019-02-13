@@ -1,40 +1,15 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
-}
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 15px;
-}
-
-
-</style>
-</head>
-<body>
-
-<!-- <div class="panel" >
-    <div class="panel-heading">{{title}}</div>
-    <div class="panel-body">
-<div  class="table-responsive" > -->
    
  
 <div class="panel" >
+                
         <div class="panel-heading">{{title}}</div>
         <div class="panel-body">
     <div  class="table-responsive">
         <form>
   
-            <button type="submit" >Add Product</button><br><br>
+            <button type="submit" a [routerLink]="['/add-product']"  align="right" width="48" height="48">Add Product</button><br><br>
     <table align="center">
 
    <tr>
@@ -60,11 +35,15 @@ th, td {
     <tr> <td>&nbsp;</td> </tr>
     <tr>
      
-            <button type="submit">Submit</button>
+            <button type="submit" style="margin-left: 50%">Submit</button>
             
-    </table>
+    </table> 
      
-    <table>
+    <button type="submit" a [routerLink]="['/delete-product']" >Delete Product</button><br><br>
+    <div>
+        <router-outlet></router-outlet>
+      </div>
+    <!-- <table>
             <tr>
             </tr>
             <table align="center">
@@ -96,4 +75,4 @@ th, td {
             </table>
             </table>
     </form>
-    </div>
+    </div> -->

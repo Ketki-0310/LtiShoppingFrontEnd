@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+<div class="panel" >
+    <div class="panel-heading">{{title}}</div>
+    <div class="panel-body">
+<div  class="table-responsive">
+    <form>
+           
+            
+            <button type="submit" a [routerLink]="['/delete-product']">Delete Product</button><br><br>
+
+
+<table align="center">
+  
+<tr>
+    <td>Product Name:</td>
+    <td><input type='text' name='name' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td>Product Image:</td>
+    <td><input type='text' name='name' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td>Product Description:</td>
+    <td><input type='text' name='name' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    
+    <td>Product Price:</td>
+    <td><input type='text' name='name' required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+ 
+        <button type="submit" style="background-color:rgb(204, 230, 204);margin-left:50;margin-right:50;display:block;margin-top:35%;margin-bottom:25%">Submit</button>
+        
+</table>

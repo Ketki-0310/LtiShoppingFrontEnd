@@ -11,6 +11,11 @@ import { ProductComponent } from 'src/Registration/Login-module/product-componen
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
 import { RetailerHomepage } from './retailer-homepage/retailer-homepage.component';
+import { Footwear } from './categories/footwear/footwear.component';
+import { Electronics } from './categories/electronics/electronics.component';
+import { Mobile } from './categories/mobile/mobile.component';
+import { AddProduct } from './add-product/add-product.component';
+import { DeleteProduct } from './delete-product/delete-product.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { RetailerHomepage } from './retailer-homepage/retailer-homepage.componen
     ProductComponent,
     AdminLoginComponent,
     AdminHomepageComponent,
-    RetailerHomepage
+    RetailerHomepage,
+    Footwear,
+    Electronics,
+    Mobile,
+    AddProduct,
+    DeleteProduct,
 
   ],
   imports: [
@@ -37,6 +47,11 @@ import { RetailerHomepage } from './retailer-homepage/retailer-homepage.componen
       , {path: 'retailer-login', component: RetailerLoginComponent}
       , {path: 'registration-form', component: RegistrationComponent}
       , {path: 'login', component: LoginComponent}
+      , {path: 'footwear', component: Footwear}
+      , {path: 'electronics', component: Electronics}
+      , {path: 'mobile', component: Mobile}
+      , {path: 'add-product', component: AddProduct}
+      , {path: 'delete-product', component: DeleteProduct}
 ])
   ],
   providers: [],

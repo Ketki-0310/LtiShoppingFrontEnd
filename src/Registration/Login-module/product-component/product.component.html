@@ -84,10 +84,10 @@ body {
 
 
   <div class="topnav">
-    <a class="active" href="#Clothing">Clothing</a>
-    <a href="#about">Footwear</a>
-    <a href="#contact">Electronics</a>
-    <a href="#contact">Mobile</a>
+    <a class="active" href="#clothing">Clothing</a>
+    <a href="#footwear" [routerLink]="['./footwear']">Footwear</a>
+    <a href="#electronics" [routerLink]="['./electronics']">Electronics</a>
+    <a href="#mobile" [routerLink]="['./mobile']">Mobile</a>
     <a [routerLink]="['/customer-login']">Login</a>
     <div class="AdminLoginComponent ">
       <form action="/action_page.php">
