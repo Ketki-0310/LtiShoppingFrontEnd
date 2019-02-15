@@ -14,8 +14,10 @@ import { RetailerHomepage } from './retailer-homepage/retailer-homepage.componen
 import { Footwear } from './categories/footwear/footwear.component';
 import { Electronics } from './categories/electronics/electronics.component';
 import { Mobile } from './categories/mobile/mobile.component';
-import { AddProduct } from './add-product/add-product.component';
-import { DeleteProduct } from './delete-product/delete-product.component';
+import { Clothing } from './categories/clothing/clothing.component';
+import { HomePage } from './Home/home';
+import { HomePageComponent } from './Home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -28,11 +30,11 @@ import { DeleteProduct } from './delete-product/delete-product.component';
     AdminLoginComponent,
     AdminHomepageComponent,
     RetailerHomepage,
+    Clothing,
     Footwear,
     Electronics,
     Mobile,
-    AddProduct,
-    DeleteProduct,
+    
 
   ],
   imports: [
@@ -47,11 +49,10 @@ import { DeleteProduct } from './delete-product/delete-product.component';
       , {path: 'retailer-login', component: RetailerLoginComponent}
       , {path: 'registration-form', component: RegistrationComponent}
       , {path: 'login', component: LoginComponent}
+      , {path: 'clothing', component: Clothing}
       , {path: 'footwear', component: Footwear}
       , {path: 'electronics', component: Electronics}
       , {path: 'mobile', component: Mobile}
-      , {path: 'add-product', component: AddProduct}
-      , {path: 'delete-product', component: DeleteProduct}
 ])
   ],
   providers: [],

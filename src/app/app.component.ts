@@ -10,5 +10,5 @@ import { RegistrationComponent } from 'src/Registration/registration-form.compon
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ShoppingApp';
+  ;
 }
